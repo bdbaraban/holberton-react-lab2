@@ -1,0 +1,11 @@
+serviceWorker.ts
+src/**/__tests__/**
+node_modules/**
+build/**
+scripts/**
+acceptance-tests
+webpack
+jest
+setupTests.ts
+*.test.tsx
+*.spec.tsx
