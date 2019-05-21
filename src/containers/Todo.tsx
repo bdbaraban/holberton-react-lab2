@@ -39,7 +39,11 @@ export default class TodoApp extends Component<{}, TodoAppState> {
 
   private _removeTodo(id: number): void {
     this.setState({
-      todos: this.state.todos.filter(todo => todo.id !== id)
+      todos: this.state.todos.filter(
+        (todo: TodoListItem): boolean => {
+          return todo.id !== id;
+        }
+      )
     });
   }
 
