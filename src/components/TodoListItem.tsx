@@ -1,15 +1,15 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { TodoListItem } from '../containers/Todo';
 
 interface TodoProps {
   todo: TodoListItem;
   remove: (id: number) => void;
 }
-const Todo = ({ todo, remove }: TodoProps) => (
+const Todo = ({ todo, remove }: TodoProps): ReactElement => (
   <li>
     {todo.text}
     <span
-      onClick={() => {
+      onClick={(): void => {
         remove(todo.id);
       }}
     >

@@ -1,4 +1,4 @@
-import React, { ChangeEvent, Component } from 'react';
+import React, { ChangeEvent, Component, ReactElement } from 'react';
 import { TodoListItem } from '../containers/Todo';
 
 interface AddTodoProps {
@@ -20,13 +20,13 @@ class AddTodo extends Component<AddTodoProps, AddTodoState> {
     this._handleSubmit = this._handleSubmit.bind(this);
   }
 
-  private _handleChange(event: ChangeEvent<HTMLInputElement>) {
+  private _handleChange(event: ChangeEvent<HTMLInputElement>): void {
     this.setState({
       todoText: event.target.value
     });
   }
 
-  private _handleSubmit() {
+  private _handleSubmit(): void {
     if (!this.state.todoText.trim()) return;
     const newTodo = {
       text: this.state.todoText.trim(),
@@ -38,7 +38,7 @@ class AddTodo extends Component<AddTodoProps, AddTodoState> {
     });
   }
 
-  public render() {
+  public render(): ReactElement {
     return (
       <div className="row">
         <input

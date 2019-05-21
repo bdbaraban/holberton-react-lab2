@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, ReactElement } from 'react';
 import Title from '../components/Title';
 import AddTodo from '../components/AddTodo';
 import TodoList from '../components/TodoList';
@@ -43,7 +43,7 @@ export default class TodoApp extends Component<{}, TodoAppState> {
     });
   }
 
-  public render() {
+  public render(): ReactElement {
     return (
       <div className="wrapper">
         <Title />
