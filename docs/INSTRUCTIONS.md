@@ -20,7 +20,7 @@ Redux’s `createStore` function requires a root reducer to construct a store wi
 First, let’s add Redux and the bindings for React to our project:
 
 ```bash
-$ npm install redux react-redux
+$  npm install redux react-redux @types/react-redux --save
 ```
 Create a file `reducer.js` in the `src` directory. A reducer must return the current state if it doesn’t recognize an action type, and it must also provide an initial state if the current state is undefined. We’ll begin with a reducer that does this absolute minimum before augmenting it with the ability to add and remove todos.
 
